@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {
+import HomePage from './Pages/HomePage';
+import NavBar from './components/NavBar';
+
+import './App.scss';
+import { useState } from 'react';
+import About from './Pages/About';
+import PortfoliosPage from './Pages/PortfoliosPage';
+import ContactPage from './Pages/ContactPage';
+
+const App = () => {
+  const [navToggle, setNavToggle] = useState(false);
+
+  const navClick = () => {
+    setNavToggle(!navToggle);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className={`sidebar ${navToggle ? 'nav-toggle' : ''}`}>
+          <NavBar />
+        </div>
+        <div className="nav-btn" onClick={navClick}>
+          <div className="lines-1"></div>
+          <div className="lines-2"></div>
+          <div className="lines-3"></div>
+        </div>
+
+        <div className="main-content">
+          <div className="content">
+            <Switch>
+              <Route path="/" exact>
+                <HomePage />
+              </Route>
+              <Route path="/about" exact>
+                <About />
+              </Route>
+              <Route path="/portfolios" exact>
+                <PortfoliosPage />
+              </Route>
+              <Route path="/contact" exact>
+                <ContactPage />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

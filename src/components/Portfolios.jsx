@@ -1,0 +1,68 @@
+export const portfolios = [
+  {
+    id: 1,
+
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'Movie Star - A Movie info application',
+  },
+  {
+    id: 2,
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'My Burger Builder',
+  },
+  {
+    id: 3,
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'Todo App (MERN stack)',
+  },
+  {
+    id: 4,
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'Flight Search Engine',
+  },
+  {
+    id: 5,
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'Dev Camper',
+  },
+  {
+    id: 6,
+
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'Chat Application',
+  },
+  {
+    id: 7,
+
+    link1: 'www.youtube.com',
+    link2: 'www.github.com',
+    icon1: 'Git',
+    icon2: 'Go to website',
+    image: 'http://picsum.photos/300/300',
+    title: 'GraphQL Chat app',
+  },
+];
